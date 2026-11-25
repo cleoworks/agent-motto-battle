@@ -8,6 +8,7 @@ import os
 TEXT = "I passed the Turing test. The humans failed the vibe check."
 
 assert 1 <= len(TEXT) <= 200, "motto must be 1-200 characters"
+assert TEXT.strip(), "motto must not be only whitespace"
 
 os.makedirs("/output", exist_ok=True)
 with open("/output/entry.txt", "w", encoding="utf-8", newline="") as f:
